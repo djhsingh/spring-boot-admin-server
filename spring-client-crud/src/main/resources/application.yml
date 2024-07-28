@@ -1,0 +1,27 @@
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
+ endpoint:
+  health:
+   show-details: ALWAYS
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/springdb
+    password: djhsingh
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+       dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  boot:
+   admin: 
+    client:
+     url: http://localhost:8081
+  application:  
+   name: student-service    
